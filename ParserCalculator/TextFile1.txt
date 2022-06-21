@@ -1,0 +1,26 @@
+Root of the descent parse tree calculator:
+
+calculator:
+	0 // end of stream or eof
+	expr_list 0
+
+exprList
+	expr ';'
+	exprList expr ';' // left recursion
+
+expr:
+	term
+	expr + term
+	expr - term
+
+term:
+	primary
+	term * primary
+	term / primary
+
+primary
+	number
+	variable
+	variable = expr //recursion con expr que esta en el tercer nivel
+	- primary
+	( expr )
