@@ -22,8 +22,13 @@ void testTokenizador() {
     }
 }
 
+void testParse() {
+    Parser::ClassParser parser;
+    parser.calculate();
+}
 
 int main()
 {
-    testTokenizador();
+    //testTokenizador();
+    testParse();
 }

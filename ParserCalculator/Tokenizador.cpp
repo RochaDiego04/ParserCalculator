@@ -3,7 +3,7 @@
 namespace Tokenizador{
 	std::istream& ClassTokenizador::getNextChar(char& chr) {
 		
-		while (this->mStream.get(chr) && (std::isblank(chr) || chr == '\n')) //isblank para no contar espacios en blanco
+		while (this->mStream.get(chr) && (std::isblank(chr) || chr == '\n')); //isblank para no contar espacios en blanco ni los new line \n
 			return this->mStream;
 	}
 
